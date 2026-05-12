@@ -15,7 +15,7 @@ if st.button("Predict"):
 
     prediction = model.predict(transformed_text)
 
-    if prediction[0] == 0:
-        st.error("Fake News ❌")
-    else:
-        st.success("Real News ✅")
+if prediction[0] == 1:
+    st.success("Real News ✅")
+else:
+    st.error("Fake News ❌")
